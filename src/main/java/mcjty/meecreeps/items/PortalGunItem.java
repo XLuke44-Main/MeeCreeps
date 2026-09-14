@@ -366,7 +366,16 @@ public class PortalGunItem extends Item {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-        if (!world.isRemote && !player.isSneaking()) throwProjectile(player, hand, world);
+        if (player.isSneaking()) {
+            if (world.isRemote) {
+                BlockPos pos = player.getPosition().down();
+                GuiWheel.selectedBlock = pos;
+                GuiWheel.selectedSide = EnumFacing.UP;
+                player.openGui(MeeCreeps.instance, GuiProxy.GUI_WHEEL, world, pos.getX(), pos.getY(), pos.getZ());
+            }
+        } else if (!world.isRemote) {
+            throwProjectile(player, hand, world);
+        }
         return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
     }
 

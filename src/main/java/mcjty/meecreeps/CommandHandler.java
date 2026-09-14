@@ -127,7 +127,8 @@ public class CommandHandler {
         });
         McJtyLib.registerCommand(MeeCreeps.MODID, CMD_LIST_DIMENSIONS, (player, arguments) -> {
             Integer[] ids = DimensionManager.getStaticDimensionIDs();
-            player.sendMessage(new TextComponentString("Available dimensions:"));
+            player.sendMessage(new TextComponentString("Available dimensions:")
+                    .setStyle(new Style().setColor(TextFormatting.GOLD)));
             for (Integer id : ids) {
                 String name = null;
                 try {
@@ -143,7 +144,8 @@ public class CommandHandler {
                     } catch (Throwable ignored) {
                     }
                 }
-                player.sendMessage(new TextComponentString("DIMID " + id + (name == null || name.isEmpty() ? "" : " - " + name)));
+                player.sendMessage(new TextComponentString("DIMID " + id + (name == null || name.isEmpty() ? "" : " - " + name))
+                        .setStyle(new Style().setColor(id == player.getEntityWorld().provider.getDimension() ? TextFormatting.GREEN : TextFormatting.AQUA)));
             }
             return true;
         });

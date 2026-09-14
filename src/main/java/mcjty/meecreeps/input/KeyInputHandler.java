@@ -5,11 +5,14 @@ import mcjty.lib.typed.TypedMap;
 import mcjty.meecreeps.CommandHandler;
 import mcjty.meecreeps.MeeCreeps;
 import mcjty.meecreeps.items.PortalGunItem;
+import mcjty.meecreeps.gui.GuiAskName;
+import mcjty.meecreeps.setup.GuiProxy;
 import mcjty.meecreeps.network.MeeCreepsMessages;
 import mcjty.meecreeps.render.BalloonRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import org.lwjgl.input.Keyboard;
@@ -23,6 +26,15 @@ public class KeyInputHandler {
 
         ItemStack gun = getHeldGun(mc);
         if (gun.isEmpty()) return;
+
+        if (Keyboard.getEventKey() == Keyboard.KEY_INSERT && Keyboard.getEventKeyState() && mc.currentScreen == null) {
+            int current = PortalGunItem.getCurrentDestination(gun);
+            int index = current >= 0 && current < 24 ? current : PortalGunItem.RING_CENTER * PortalGunItem.SLOTS_PER_RING;
+            GuiAskName.destinationIndex = index;
+            BlockPos p = mc.player.getPosition().down();
+            mc.player.openGui(MeeCreeps.instance, GuiProxy.GUI_ASKCOORDS, mc.world, p.getX(), p.getY(), p.getZ());
+            return;
+        }
 
         // Keyboard-only question-mark shortcut. Handle it here so it works both in-game and
         // while the Custom Destination GUI is open; the GUI itself does not expose a button.

@@ -1,3 +1,14 @@
+# 1.4.5
+
+* Changed dimension list colouring:
+  * Available dimensions are now shown in aqua
+  * Your current dimension is highlighted in light green
+  * The "Available dimensions" header is shown in gold
+
+* Added the ability to access the Custom Destinations menu while holding the Portal Gun
+* Added the ability to open the Portal Destinations menu without needing to click on a block
+* Shift-right-clicking the Portal Gun now opens the Portal Destinations menu directly
+
 1.4.4:
 
 - Added bidirectional portals.
