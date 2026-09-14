@@ -1,0 +1,25 @@
+[
+  {
+    "modid": "meecreeps",
+    "name": "Patched MeeCreeps",
+    "description": "Patched MeeCreeps mod for Minecraft Forge 1.12.2, preserving the original MeeCreeps mechanics with stability and portal-system fixes.",
+    "version": "1.12-1.4.4",
+    "mcversion": "1.12.2",
+    "url": "https://github.com/XLuke44-Main/MeeCreeps",
+    "updateUrl": "",
+    "authorList": [
+      "XLuke44"
+    ],
+    "credits": "Original MeeCreeps by McJty and contributors. Patched and maintained by XLuke44. Original project: https://github.com/McJty/MeeCreeps",
+    "logoFile": "",
+    "screenshots": [],
+    "requiredMods": [
+      "mcjtylib_ng"
+    ],
+    "dependencies": [
+      "mcjtylib_ng"
+    ],
+    "useDependencyInformation": true
+  }
+]
+

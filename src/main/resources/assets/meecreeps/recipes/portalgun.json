@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "meecreeps:portalgun"
+  },
+  "pattern": [
+    "ec",
+    "  "
+  ],
+  "type": "meecreeps:insert_cartridge_factory",
+  "key": {
+    "e": {
+      "item": "meecreeps:emptyportalgun"
+    },
+    "c": {
+      "item": "meecreeps:cartridge"
+    }
+  }
+}

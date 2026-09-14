@@ -1,0 +1,22 @@
+1.4.4:
+
+- Added bidirectional portals.
+- Added player locator portals.
+- Added a key to view a list of all dimensions.
+- Added custom destination handling.
+- Improved saved destination handling.
+- Improved unloaded dimension handling.
+- Tripled destination storage capacity.
+- Added lowercase direction support for custom destinations.
+- Improved portal placement and destination safety.
+- Improved horizontal portal support.
+- Fixed portal teleportation loops.
+- Fixed portal Auto-Close and manual closing behavior.
+- Improved portal opening and closing animations.
+- Improved Destination Wheel hover and selection behavior.
+- Added J-key portal closing.
+- Added Creative inventory entries for a fully charged Portal Gun and Portal Gun Cartridge.
+- Increased the default maximum portal charge to 100.
+- Increased the default Ender Pearl refill amount to 100 charges.
+- Added valid Forge 1.12.2 mod metadata.
+- Finalized portal and destination stability fixes.
