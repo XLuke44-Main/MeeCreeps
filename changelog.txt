@@ -1,0 +1,46 @@
+# 1.4.6
+
+Added:
+
+* Added Blue Portal Fluid as a new, cheaper Portal Fluid variant.
+* Added Blue Portal Fluid cartridges.
+* Added Empty Blue Portal Fluid cartridges.
+* Added a Portal Gun variant containing Blue Portal Fluid.
+* Added dedicated Blue Portal Fluid textures for the Portal Gun, including the Portal Gun glass, body details, cartridges, empty cartridges and projectiles.
+* Added a dedicated blue portal effect for Blue Portal Fluid portals.
+* Added dedicated blue projectile visuals for Blue Portal Fluid.
+* Added dedicated Blue Portal Fluid Destination Wheel textures.
+* Added wheel_blue.png for the Blue Portal Fluid Destination Wheel.
+* Added wheel_hilight_blue.png for the Blue Portal Fluid Destination Wheel highlight.
+* Added Blue Portal Fluid versions of the Portal Gun, Blue Portal Fluid cartridge and Empty Blue Portal Fluid cartridge to the Creative inventory.
+* Added Blue Portal Fluid refilling from water blocks.
+* Added Blue Portal Fluid refilling from water buckets.
+* Added Blue Portal Fluid refilling from water bottles.
+* Added Blue Portal Fluid refilling from potions.
+* Added Blue Portal Fluid refilling from splash potions.
+* Added Blue Portal Fluid refilling from lingering potions.
+* Added the ability to refill Blue Portal Fluid directly from a water bucket in the player's inventory.
+* Added automatic replacement of consumed water buckets with empty buckets when refilling Blue Portal Fluid.
+* Added the "No water in inventory" message when attempting to refill Blue Portal Fluid without a water source.
+* Added a recipe for Empty Blue Portal Fluid cartridges using one glass block above one empty bucket.
+* Added the ability to create portals in mid-air.
+* Added Portal Gun support for creating and using air portals.
+* Added a new keybind for Portal Gun functionality.
+* Added glowing portal rendering.
+* Added blue warning messages for Blue Portal Fluid destination restrictions.
+* Added the "THIS DESTINATION IS IN ANOTHER DIMENSION!" message for inaccessible saved destinations.
+* Added the "THAT PLAYER IS IN ANOTHER DIMENSION!" message when attempting to target a player in another dimension.
+* Added the "BLUE PORTAL FLUID IS NOT COMPATIBLE WITH INTERDIMENSIONAL TRAVEL!" message for Blue Portal Fluid dimension-listing attempts.
+
+
+Changed:
+
+* Changed Portal Gun and cartridge insertion crafting to shapeless recipes.
+* Changed Portal Gun and cartridge insertion so the ingredients can be placed in any crafting position.
+* Changed Portal Gun and cartridge insertion so the recipe works in both the player's inventory and a crafting table.
+* Changed the Green Portal Gun's texture to match the style of the new Blue Portal Gun texture.
+
+* Changed the Custom Destination interface for Blue Portal Fluid to display "Custom Destination: X;Y;Z" instead of the interdimensional coordinate format.
+* Changed the Custom Destination interface so the "Press ? to list available dimensions" prompt is removed when using Blue Portal Fluid.
+* Changed the dimension-listing function for Blue Portal Fluid so it displays "BLUE PORTAL FLUID IS NOT COMPATIBLE WITH INTERDIMENSIONAL TRAVEL!" instead of listing dimensions.
+* Changed portals to glow, improving portal visibility.
