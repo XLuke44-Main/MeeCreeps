@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "meecreeps:items/projectile"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "meecreeps:blue_fluid": 1.0
+      },
+      "model": "meecreeps:item/projectile_blue"
+    }
+  ]
+}

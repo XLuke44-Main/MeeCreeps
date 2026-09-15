@@ -1,0 +1,20 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "meecreeps:items/cartridge"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "meecreeps:blue_fluid": 1.0
+      },
+      "model": "meecreeps:item/cartridge_blue_empty"
+    },
+    {
+      "predicate": {
+        "meecreeps:blue_fluid": 2.0
+      },
+      "model": "meecreeps:item/cartridge_blue"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "meecreeps:blue_cartridge_refill_factory",
+  "result": { "item": "meecreeps:cartridge" },
+  "ingredients": [
+    { "item": "meecreeps:cartridge" },
+    { "item": "minecraft:splash_potion" }
+  ]
+}
