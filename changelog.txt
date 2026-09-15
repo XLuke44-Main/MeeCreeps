@@ -1,0 +1,10 @@
+# MeeCreeps 1.4.7.1
+
+## Changed
+
+* Updated the intradimensional Transport Solution advancement name.
+* Updated the interdimensional Transport Solution advancement name.
+
+## Fixed
+
+Fixed the Polish translations for advancements.
