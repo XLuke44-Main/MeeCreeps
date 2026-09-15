@@ -1,0 +1,191 @@
+package mcjty.meecreeps.items;
+
+import mcjty.meecreeps.MeeCreeps;
+import mcjty.meecreeps.actions.PacketShowBalloonToClient;
+import mcjty.meecreeps.config.ConfigSetup;
+import mcjty.meecreeps.network.MeeCreepsMessages;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ActionResult;
+import net.minecraft.item.IItemPropertyGetter;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.commons.lang3.StringUtils;
+
+import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.List;
+
+public class CartridgeItem extends Item {
+
+    public CartridgeItem() {
+        setRegistryName("cartridge");
+        setUnlocalizedName(MeeCreeps.MODID + ".cartridge");
+        setMaxStackSize(1);
+        setCreativeTab(MeeCreeps.setup.getTab());
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        Collections.addAll(tooltip, StringUtils.split(I18n.format("message.meecreeps.tooltip.cartridge_item", Integer.toString(getCharge(stack))), "\n"));
+    }
+
+
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0,
+                new net.minecraft.client.renderer.block.model.ModelResourceLocation(getRegistryName(), "inventory"));
+        addPropertyOverride(new net.minecraft.util.ResourceLocation(MeeCreeps.MODID, "blue_fluid"),
+                new IItemPropertyGetter() {
+                    @Override
+                    public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
+                        if (!isBlueFluid(stack)) return 0.0F;
+                        return getCharge(stack) > 0 ? 2.0F : 1.0F;
+                    }
+                });
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubItems(net.minecraft.creativetab.CreativeTabs tab, net.minecraft.util.NonNullList<ItemStack> items) {
+        if (!isInCreativeTab(tab)) return;
+
+        ItemStack emptyCartridge = new ItemStack(this);
+        setCharge(emptyCartridge, 0);
+        items.add(emptyCartridge);
+
+        ItemStack filledCartridge = new ItemStack(this);
+        setCharge(filledCartridge, ConfigSetup.maxCharge.get());
+        items.add(filledCartridge);
+
+        ItemStack emptyBlueCartridge = new ItemStack(this);
+        setBlueFluid(emptyBlueCartridge, true);
+        setCharge(emptyBlueCartridge, 0);
+        items.add(emptyBlueCartridge);
+
+        ItemStack filledBlueCartridge = new ItemStack(this);
+        setBlueFluid(filledBlueCartridge, true);
+        setCharge(filledBlueCartridge, ConfigSetup.maxCharge.get());
+        items.add(filledBlueCartridge);
+    }
+
+    @Override
+    public String getItemStackDisplayName(ItemStack stack) {
+        if (isBlueFluid(stack)) {
+            return getCharge(stack) > 0 ? "Blue Portal Fluid Cartridge" : "Empty Blue Portal Fluid Cartridge";
+        }
+        return super.getItemStackDisplayName(stack);
+    }
+
+    public static void setBlueFluid(ItemStack stack, boolean blue) {
+        if (stack.getTagCompound() == null) stack.setTagCompound(new NBTTagCompound());
+        if (blue) stack.getTagCompound().setBoolean("blueFluid", true);
+        else stack.getTagCompound().removeTag("blueFluid");
+    }
+
+    public static boolean isBlueFluid(ItemStack stack) {
+        return stack != null && stack.hasTagCompound() && stack.getTagCompound().getBoolean("blueFluid");
+    }
+
+    public static void setCharge(ItemStack stack, int charge) {
+        if (stack.getTagCompound() == null) {
+            stack.setTagCompound(new NBTTagCompound());
+        }
+        stack.getTagCompound().setInteger("charge", charge);
+    }
+
+    public static int getCharge(ItemStack stack) {
+        if (stack.getTagCompound() == null) {
+            return 0;
+        }
+        return stack.getTagCompound().getInteger("charge");
+    }
+
+
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public double getDurabilityForDisplay(ItemStack stack) {
+        int max = ConfigSetup.maxCharge.get();
+        int stored = getCharge(stack);
+        return (max - stored) / (double) max;
+    }
+
+    @Override
+    public EnumActionResult onItemUseFirst(EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
+        if (!world.isRemote) {
+            chargeCartridge(player, world, pos, hand);
+        }
+        return EnumActionResult.SUCCESS;
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+        if (!world.isRemote) {
+            chargeCartridge(player, world, player.getPosition(), hand);
+        }
+        return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+    }
+
+    private void chargeCartridge(EntityPlayer player, World world, BlockPos pos, EnumHand hand) {
+        ItemStack heldItem = player.getHeldItem(hand);
+        int maxCharge = ConfigSetup.maxCharge.get();
+        int charge = getCharge(heldItem);
+        if (charge >= maxCharge) {
+            MeeCreepsMessages.INSTANCE.sendTo(new PacketShowBalloonToClient("message.meecreeps.cartridge_full"), (EntityPlayerMP) player);
+            return;
+        }
+
+        if (isBlueFluid(heldItem)) {
+            if (world.getBlockState(pos).getMaterial() == Material.WATER) {
+                setCharge(heldItem, maxCharge);
+                return;
+            }
+
+            // Blue Portal Fluid can also be filled directly from a water bucket carried
+            // anywhere in the player's inventory, matching the original ender-pearl
+            // inventory-refill interaction of the green fluid.
+            for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
+                ItemStack stack = player.inventory.getStackInSlot(i);
+                if (stack.getItem() == Items.WATER_BUCKET) {
+                    stack.shrink(1);
+                    player.inventory.setInventorySlotContents(i, new ItemStack(Items.BUCKET));
+                    setCharge(heldItem, maxCharge);
+                    return;
+                }
+            }
+
+            MeeCreepsMessages.INSTANCE.sendTo(new PacketShowBalloonToClient("message.meecreeps.missing_water"), (EntityPlayerMP) player);
+            return;
+        }
+
+        for (int i = 0 ; i < player.inventory.getSizeInventory() ; i++) {
+            ItemStack stack = player.inventory.getStackInSlot(i);
+            if (stack.getItem() == Items.ENDER_PEARL) {
+                stack.splitStack(1);
+                charge = Math.min(maxCharge, charge + ConfigSetup.chargesPerEnderpearl.get());
+                setCharge(heldItem, charge);
+                return;
+            }
+        }
+        MeeCreepsMessages.INSTANCE.sendTo(new PacketShowBalloonToClient("message.meecreeps.missing_enderpearls"), (EntityPlayerMP) player);
+    }
+
+}

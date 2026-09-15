@@ -1,0 +1,10 @@
+# 1.4.6.1
+
+# Fixed
+
+- Fixed Empty Portal Guns losing their custom NBT data and display name when combined with cartridges.
+- Fixed MeeCreeps message balloons not rendering text in white.
+
+## Changed
+
+- Renamed the mod to **XLuke44's MeeCreeps**.
