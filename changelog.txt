@@ -1,0 +1,24 @@
+# MeeCreeps 1.4.7
+
+## Added
+
+Advancements
+
+* Added the MeeCreeps advancement system.
+* Added five MeeCreeps advancements forming a simple progression tree:
+
+  * Welcome to MeeCreeps
+  * The Portal Gun
+  * Local Travel
+  * Dimensional Travel
+  * Look at me!
+
+## Fixed
+
+* Fixed keybinds triggering when they should not.
+* Fixed text colouring issues.
+* Fixed MeeCreep dialogue text colours.
+
+## Changed
+
+Updated mcmod.info
