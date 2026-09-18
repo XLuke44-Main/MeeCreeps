@@ -1,0 +1,6 @@
+# MeeCreeps 1.4.7.3
+
+## Fixed
+
+* Fixed blue portal's texture
+* Fixed portal rendering crop
