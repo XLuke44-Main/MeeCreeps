@@ -1,0 +1,32 @@
+# MeeCreeps 1.4.7.4
+
+## Fixed
+
+* Fixed Blue Portal Fluid cartridge refilling to recognize water buckets, regular water bottles, splash water bottles, and lingering water bottles for crafting and inventory right-click refilling.
+
+* Fixed direct Blue Portal Fluid cartridge refilling when the water source is the water block adjacent to the clicked block face.
+
+* Fixed an issue where portal guns could close portals opened by other portal guns via manual right-clicking.
+
+## Changed
+
+* Changed the cartridge crafting recipes.
+
+* Renamed Portal Fluid to Transport Solutions for consistency.
+
+* Updated the project to Forge 14.23.5.2859.
+
+* Updated compilation dependencies.
+
+* Changed the minimum required McJtyLib version from 3.5.0 to 3.5.4.
+
+## Added
+
+* Added Extradimensional Transport Solutions.
+
+* Added Hyperdimensional Transport Solutions.
+
+* Added separate configuration files for all Transport Solutions.
+
+* Added admin-only command `/close_all_portals` to force-close all open portals.
+
