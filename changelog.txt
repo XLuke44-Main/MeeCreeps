@@ -1,0 +1,5 @@
+# MeeCreeps 1.4.7.5
+
+## Fixed
+
+* Fixed a bug where running the mod on a server caused it to crash.
