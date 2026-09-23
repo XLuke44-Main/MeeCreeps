@@ -1,0 +1,173 @@
+#PARSE_ESCAPES
+item.meecreeps.creepcube.name=Creep Cube
+item.meecreeps.portalgun.name=Portal Gun
+item.meecreeps.emptyportalgun.name=Portal Gun (empty)
+item.meecreeps.cartridge.name=Interdimensional Transport Solution Cartridge
+item.meecreeps.interdimensional_cartridge.name=Interdimensional Transport Solution Cartridge
+item.meecreeps.empty_interdimensional_cartridge.name=Empty Interdimensional Transport Solution Cartridge
+item.meecreeps.intradimensional_cartridge.name=Intradimensional Transport Solution Cartridge
+item.meecreeps.empty_intradimensional_cartridge.name=Empty Intradimensional Transport Solution Cartridge
+item.meecreeps.extradimensional_cartridge.name=Extradimensional Transport Solution Cartridge
+item.meecreeps.empty_extradimensional_cartridge.name=Empty Extradimensional Transport Solution Cartridge
+item.meecreeps.hyperdimensional_cartridge.name=Hyperdimensional Transport Solution Cartridge
+tile.meecreeps.portal_spawner_intradimensional.name=Intradimensional Portal Spawner
+tile.meecreeps.portal_spawner_extradimensional.name=Extradimensional Portal Spawner
+tile.meecreeps.portal_spawner_interdimensional.name=Interdimensional Portal Spawner
+tile.meecreeps.portal_spawner_hyperdimensional.name=Hyperdimensional Portal Spawner
+tile.meecreeps.portal_spawner_linked_intradimensional.name=Linked Intradimensional Portal Spawner
+tile.meecreeps.portal_spawner_linked_interdimensional.name=Linked Interdimensional Portal Spawner
+tile.meecreeps.portal_spawner_linked_extradimensional.name=Linked Extradimensional Portal Spawner
+tile.meecreeps.portal_spawner_linked_hyperdimensional.name=Linked Hyperdimensional Portal Spawner
+message.meecreeps.portal_spawner_linked_no_rebind=Linked Portal Spawners are permanently bound to their twin.
+item.meecreeps.empty_hyperdimensional_cartridge.name=Empty Hyperdimensional Transport Solution Cartridge
+
+achievement.meecreeps.welcome=§aWelcome to MeeCreeps
+achievement.meecreeps.welcome.desc=Welcome to MeeCreeps
+achievement.meecreeps.portal_gun=§fThe Portal Gun
+achievement.meecreeps.portal_gun.desc=Craft your first portal gun
+achievement.meecreeps.local_travel=§9Local Travel
+achievement.meecreeps.local_travel.desc=Create intradimensional transport solution
+achievement.meecreeps.dimensional_travel=§9Interdimensional Travel
+achievement.meecreeps.dimensional_travel.desc=Create interdimensional transport solution
+achievement.meecreeps.extradimensional_travel=Extradimensional Travel
+achievement.meecreeps.extradimensional_travel.desc=Create extradimensional transport solution
+achievement.meecreeps.look_at_me=§bLook at me!
+achievement.meecreeps.look_at_me.desc=Craft The Creep Cube
+entity.MeeCreeps.name=MeeCreeps
+entity.meecreeps_projectile.name=Portal Gun Projectile
+
+itemGroup.meecreeps=XLuke44's MeeCreeps
+
+message.meecreeps.cant_find_portal_spot=Can't find a good spot to make a portal!
+message.meecreeps.missing_cartridge=This gun does not have a cartridge!
+message.meecreeps.cant_spawn_meecreep=Can't find a good spot to spawn a MeeCreep!
+message.meecreeps.cartridge_full=This cartridge is full!
+message.meecreeps.missing_enderpearls=No ender pearls in inventory!
+message.meecreeps.missing_intradimensional_refill=No water bucket or potion in inventory!
+message.meecreeps.missing_redstone=You do not have any redstone!
+message.meecreeps.missing_gold_ingots=No golden ingots in inventory!
+message.meecreeps.box_unusable=This MeeCreep box has become unusable!
+message.meecreeps.no_last_action=There is no last action!
+message.meecreeps.last_action_not_possible=The last action is not possible here!
+message.meecreeps.gun_no_charge=Not enough charge!
+message.meecreeps.gun_no_destination=This gun does not have a current destination!
+message.meecreeps.portal_spawner_no_destination=This Portal Gun does not have a saved destination selected!
+message.meecreeps.portal_spawner_unavailable=The selected destination dimension is unavailable!
+message.meecreeps.portal_spawner_incompatible=That destination is not compatible with this Portal Spawner!
+message.meecreeps.portal_spawner_assigned=Portal Spawner destination set to %s.
+message.meecreeps.gun_bad_destination=Something is wrong with the current destination!
+message.meecreeps.portal_already_there=There is already a portal at the destination!
+message.meecreeps.destination_obstructed=The destination seems obstructed!
+message.meecreeps.max_spawn_reached=You can only spawn %s MeeCreep(s) per player!
+message.meecreeps.cannot_find=I cannot find any %s!
+message.meecreeps.cant_continue=I cannot continue this way
+message.meecreeps.cant_pickup_block=I cannot pick up this block!
+message.meecreeps.cant_find_ladders=I cannot find any ladders
+message.meecreeps.cant_find_torches=I cannot find any torches
+message.meecreeps.cant_find_stairs_or_cobble=I cannot find stairs or cobblestone!
+message.meecreeps.where_are_you=You are not near me so I had to drop everything
+message.meecreeps.inventory_missing=The inventory is missing so I had to drop everything
+message.meecreeps.i_gave_some_things=Here are some items for you
+message.meecreeps.put_stuff_away_marked=I put stuff in a marked inventory
+message.meecreeps.put_stuff_away_target=I put stuff in the original target inventory
+message.meecreeps.put_stuff_away_specific=I put stuff in a chest %s from your position
+
+message.meecreeps.gui.name_label=Name:
+message.meecreeps.gui.please_stop_now=Please stop now!
+message.meecreeps.gui.carry_on=Carry on...
+message.meecreeps.gui.never_mind=Never mind...
+message.meecreeps.gui.other_things=Can you do other things?
+message.meecreeps.gui.problem=Is there a problem?
+message.meecreeps.gui.alternatives=Any of this suits you then?
+message.meecreeps.gui.cant_do_much=There is not much I can do here
+message.meecreeps.gui.what_can_i_do=What can I do for you?
+message.meecreeps.gui.destination_not_set=Destination not set
+
+message.meecreeps.action.make_house=Build a house
+message.meecreeps.action.make_platform=Build a platform
+message.meecreeps.action.flatten_area=Flatten an area
+message.meecreeps.action.chop_tree=Chop this tree
+message.meecreeps.action.chop_tree_collect=Chop this tree and get the drops
+message.meecreeps.action.dig_down=Dig straight down to bedrock
+message.meecreeps.action.dig_down_stairs=Dig down to bedrock using stairs
+message.meecreeps.action.mine_ores=Find and mine all nearby ores
+message.meecreeps.action.dig_tunnel=Dig a 3x3 tunnel, 32 blocks long
+message.meecreeps.action.harvest_replant=Harvest and replant those crops
+message.meecreeps.action.harvest=Harvest those crops
+message.meecreeps.action.torches=Light up the area
+message.meecreeps.action.follow_and_lightup=Follow me and lightup the area
+message.meecreeps.action.pickup=Pickup items
+message.meecreeps.action.follow_and_pickup=Follow me and pickup items
+message.meecreeps.action.move_stuff=Pick up and follow me
+message.meecreeps.action.idle=Just idle a bit
+message.meecreeps.action.angry=Get angry
+
+message.meecreeps.action.what_direction=What direction should I dig?
+message.meecreeps.action.flatten_area_size=What area do you want to flatten?
+message.meecreeps.action.house_size=How big do you want the house?
+message.meecreeps.action.platform_size=How big do you want the platform?
+message.meecreeps.action.to_north=To the north
+message.meecreeps.action.to_south=To the south
+message.meecreeps.action.to_west=To the west
+message.meecreeps.action.to_east=To the east
+message.meecreeps.action.flatten_9x9=9x9 is good enough
+message.meecreeps.action.flatten_11x11=11x11 please
+message.meecreeps.action.flatten_13x13=I'm going to need 13x13
+message.meecreeps.action.house_9x9=9x9 of course!
+message.meecreeps.action.house_11x11=11x11 is clearly inferior but...
+message.meecreeps.action.house_13x13=I need the room so take 13x13
+message.meecreeps.action.platform_9x9=9x9 is the perfect size!
+message.meecreeps.action.platform_11x11=11x11 because I'm greedy
+message.meecreeps.action.platform_13x13=I'm special so make it a 13x13
+
+message.meecreeps.tooltip.interdimensional_cartridge_item=\
+    §aInterdimensional Transport Solution cartridge for the portal gun\n\
+    §fRight click to charge by consuming\n\
+    §fender pearls in inventory\n\
+    §aCharges left: §e%s
+
+message.meecreeps.tooltip.intradimensional_cartridge_item=\
+    §9Intradimensional Transport Solution cartridge for the portal gun\n\
+    §fRight click to refill using water\n\
+    §fCan also be refilled with water bottles and potions\n\
+    §9Charges left: §e%s
+
+message.meecreeps.tooltip.extradimensional_cartridge_item=\
+    §eExtradimensional Transport Solution cartridge for the portal gun\n\
+    §fRight click to refill using golden ingots\n\
+    §eCharges left: §e%s
+message.meecreeps.tooltip.hyperdimensional_cartridge_item=\
+    §cHyperdimensional Transport Solution cartridge for the portal gun\n\
+    §fRight click to refill using redstone\n\
+    §cCharges left: §e%s
+
+message.meecreeps.tooltip.cube_intro=\
+    §aRight click: §fSpawn MeeCreep\n\
+    §aSneak right click: §frepeat last action
+
+message.meecreeps.tooltip.cube_uses=\
+    §aUses left: §e%s
+
+message.meecreeps.tooltip.emptyportalgun=\
+    §aCombine with charged cartridge\n\
+    §ain crafting grid
+
+message.meecreeps.tooltip.portalgun=\
+    %1$sSneak right click: §fmanage destinations\n\
+    %1$sRight click: §fcreate portal to current destination\n\
+    %1$sRight click on portal: §fremove portal\n\
+    %1$sCharges left: §e%2$s
+
+message.meecreeps.intradimensional_dimension_error=INTRADIMENSIONAL TRANSPORT SOLUTION CANNOT TRAVEL TO ANOTHER DIMENSION!
+message.meecreeps.intradimensional_player_dimension_error=THE TARGET PLAYER IS IN ANOTHER DIMENSION!
+message.meecreeps.intradimensional_dimension_list_error=INTRADIMENSIONAL TRANSPORT SOLUTION IS NOT COMPATIBLE WITH INTERDIMENSIONAL TRAVEL!
+
+key.last_message=Repeat Last Message
+key.categories.meecreeps=MeeCreeps
+key.fast_return=Fast Return
+key.portal_autoclose=Portal Auto-Close
+key.close_all_portals=Close All Portals
+key.open_saved_destinations=Open Saved Destinations
+key.air_placement=Air Placement
+achievement.meecreeps.hyperdimensional_travel=Hyperdimensional Travel
+achievement.meecreeps.hyperdimensional_travel.desc=Create hyperdimensional transport solution

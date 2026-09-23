@@ -1,0 +1,8 @@
+{
+  "parent": "meecreeps:item/portalgun",
+  "textures": {
+    "texture": "meecreeps:items/portal_gun_top_bottom_intradimensional",
+    "texture1": "meecreeps:items/portal_gun_side_intradimensional",
+    "texture2": "meecreeps:items/portal_gun_glass_intradimensional"
+  }
+}

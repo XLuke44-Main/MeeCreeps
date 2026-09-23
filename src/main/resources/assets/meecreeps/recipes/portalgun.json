@@ -1,0 +1,10 @@
+{
+  "result": {
+    "item": "meecreeps:portalgun"
+  },
+  "type": "meecreeps:insert_cartridge_factory",
+  "ingredients": [
+    { "item": "meecreeps:emptyportalgun" },
+    { "item": "meecreeps:cartridge" }
+  ]
+}
