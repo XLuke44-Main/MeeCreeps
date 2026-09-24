@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "meecreeps:portal_spawner_intradimensional"
+  },
+  "pattern": [
+    "M M",
+    "MCM",
+    "M M"
+  ],
+  "type": "meecreeps:portal_spawner_recipe",
+  "solution": "intradimensional",
+  "mirrored": false,
+  "key": {
+    "M": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "meecreeps:cartridge"
+    }
+  }
+}

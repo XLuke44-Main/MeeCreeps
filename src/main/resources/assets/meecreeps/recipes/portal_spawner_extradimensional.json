@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "meecreeps:portal_spawner_extradimensional"
+  },
+  "pattern": [
+    "M M",
+    "MCM",
+    "M M"
+  ],
+  "type": "meecreeps:portal_spawner_recipe",
+  "solution": "extradimensional",
+  "mirrored": false,
+  "key": {
+    "M": {
+      "item": "minecraft:gold_block"
+    },
+    "C": {
+      "item": "meecreeps:cartridge"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "result": { "item": "meecreeps:cartridge" },
+  "pattern": [
+    "nnn",
+    "nGn",
+    "nBn"
+  ],
+  "type": "meecreeps:extradimensional_cartridge_factory",
+  "key": {
+    "G": { "item": "minecraft:glass" },
+    "B": { "item": "minecraft:bucket" },
+    "n": { "item": "minecraft:gold_ingot" }
+  }
+}
