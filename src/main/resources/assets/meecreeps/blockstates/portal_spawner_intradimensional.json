@@ -1,0 +1,52 @@
+{
+  "forge_marker": 1,
+  "defaults": {},
+  "variants": {
+    "facing=north,half=lower": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_lower"
+      }
+    ],
+    "facing=south,half=lower": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_lower",
+        "y": 180
+      }
+    ],
+    "facing=east,half=lower": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_lower",
+        "y": 90
+      }
+    ],
+    "facing=west,half=lower": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_lower",
+        "y": 270
+      }
+    ],
+    "facing=north,half=upper": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_upper"
+      }
+    ],
+    "facing=south,half=upper": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_upper",
+        "y": 180
+      }
+    ],
+    "facing=east,half=upper": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_upper",
+        "y": 90
+      }
+    ],
+    "facing=west,half=upper": [
+      {
+        "model": "meecreeps:portal_spawner_intradimensional_upper",
+        "y": 270
+      }
+    ]
+  }
+}

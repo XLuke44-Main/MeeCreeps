@@ -1,0 +1,91 @@
+package mcjty.meecreeps;
+
+import mcjty.lib.base.ModBase;
+import mcjty.lib.proxy.IProxy;
+import mcjty.meecreeps.api.IMeeCreepsApi;
+import mcjty.meecreeps.commands.CommandClearActions;
+import mcjty.meecreeps.commands.CommandListActions;
+import mcjty.meecreeps.commands.CommandCloseAllPortals;
+import mcjty.meecreeps.commands.CommandTestApi;
+import mcjty.meecreeps.setup.ModSetup;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.*;
+
+import java.util.Optional;
+import java.util.function.Function;
+
+@Mod(
+    modid = MeeCreeps.MODID,
+    name = "XLuke44's MeeCreeps",
+    version = MeeCreeps.VERSION,
+    dependencies =
+        "required:mcjtylib_ng@[3.5.4,3.5.4];" +
+        "required:forge@[14.23.5.2859,)",
+    acceptedMinecraftVersions = "[1.12.2]"
+)
+
+public class MeeCreeps implements ModBase {
+    public static final String MODID = "meecreeps";
+    public static final String VERSION = "1.4.8.2";
+
+    @SidedProxy(clientSide = "mcjty.meecreeps.setup.ClientProxy", serverSide = "mcjty.meecreeps.setup.ServerProxy")
+    public static IProxy proxy;
+    public static ModSetup setup = new ModSetup();
+
+    @Mod.Instance(MODID)
+    public static MeeCreeps instance;
+
+    public static MeeCreepsApi api = new MeeCreepsApi();
+
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent e) {
+        setup.preInit(e);
+        proxy.preInit(e);
+    }
+
+    @Mod.EventHandler
+    public void imcCallback(FMLInterModComms.IMCEvent event) {
+        for (FMLInterModComms.IMCMessage message : event.getMessages()) {
+            if (message.key.equalsIgnoreCase("getMeeCreepsApi")) {
+                Optional<Function<IMeeCreepsApi, Void>> value = message.getFunctionValue(IMeeCreepsApi.class, Void.class);
+                if (value.isPresent()) {
+                    value.get().apply(api);
+                } else {
+                    setup.getLogger().warn("Some mod didn't return a valid result with getMeeCreepsApi!");
+                }
+            }
+        }
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent e) {
+        setup.init(e);
+        proxy.init(e);
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent e) {
+        setup.postInit(e);
+        proxy.postInit(e);
+    }
+
+    @Mod.EventHandler
+    public void serverLoad(FMLServerStartingEvent event) {
+        event.registerServerCommand(new CommandTestApi());
+        event.registerServerCommand(new CommandClearActions());
+        event.registerServerCommand(new CommandListActions());
+        event.registerServerCommand(new CommandCloseAllPortals());
+    }
+
+    @Override
+    public String getModId() {
+        return MODID;
+    }
+
+    @Override
+    public void openManual(EntityPlayer entityPlayer, int i, String s) {
+
+    }
+}
