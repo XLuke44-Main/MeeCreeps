@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "meecreeps:portal_spawner_hyperdimensional"
+  },
+  "pattern": [
+    "M M",
+    "MCM",
+    "M M"
+  ],
+  "type": "meecreeps:portal_spawner_recipe",
+  "solution": "hyperdimensional",
+  "mirrored": false,
+  "key": {
+    "M": {
+      "item": "minecraft:redstone_block"
+    },
+    "C": {
+      "item": "meecreeps:cartridge"
+    }
+  }
+}

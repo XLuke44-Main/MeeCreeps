@@ -1,0 +1,188 @@
+buildscript {
+    repositories {
+        jcenter()
+
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
+        }
+
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'maven'
+
+repositories {
+
+    maven {
+        name = "LocalMods"
+        url = uri("$rootDir/local-maven")
+    }
+
+    maven {
+        name = "Forge"
+        url = "https://maven.minecraftforge.net/"
+    }
+
+    maven {
+        name = "Sonatype"
+        url = "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+group = "com.github.mcjty"
+version = project.property("version")
+archivesBaseName = "meecreeps"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// MeeCreeps does not use annotation processors. Keep Gradle 4.9 from auto-discovering
+// Log4j's compile-classpath processor and emitting its Gradle 5.0 migration warning.
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-proc:none']
+}
+
+minecraft {
+    ext.version = "${minecraft_version}-${forge_version}"
+    mappings channel: 'snapshot', version: mcp_mappings
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+
+        server {
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+}
+
+artifacts {
+    archives sourceJar
+    archives deobfJar
+}
+
+jar.finalizedBy('reobfJar')
+
+dependencies {
+
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    implementation fg.deobf("mezz.jei:jei_1.12.2:${jei_version}")
+
+    implementation fg.deobf("mcp.mobius.waila:Hwyla:${waila_version}")
+
+    implementation fg.deobf("mcjty.theoneprobe:TheOneProbe-1.12:${top_version}")
+
+    implementation fg.deobf("cofh:RedstoneFlux:${redstoneflux_version}")
+
+    implementation fg.deobf("com.github.mcjty:intwheel:${intwheel_version}")
+
+    if (!project.hasProperty("singleproject")) {
+        implementation fg.deobf("com.github.mcjty:mcjtylib:${mcjtylib_version}")
+    } else {
+        implementation project(':McJtyLib')
+    }
+}
+
+processResources
+{
+
+    inputs.property "version", project.version
+    inputs.property "mcversion", minecraft_version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+
+        expand 'version': project.version, 'mcversion': minecraft_version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+task("uploadJars", dependsOn: "reobfJar") {
+    description = "uploads JARs"
+
+    if (System.getenv("local_maven") != null) {
+
+
+        uploadArchives {
+            repositories {
+                mavenDeployer {
+
+                    repository(
+                        url: "file://" + System.getenv("local_maven")
+                    )
+
+                    pom {
+
+                        groupId = project.group
+                        version = project.version
+                        artifactId = project.archivesBaseName
+
+                        project {
+
+                            name project.archivesBaseName
+                            packaging 'jar'
+                            description "XLuke44's MeeCreeps"
+
+                            scm {
+                                url 'https://github.com/XLuke44-Main/MeeCreeps'
+                                connection 'scm:git:git@github.com:XLuke44-Main/MeeCreeps.git'
+                                developerConnection 'scm:git:git@github.com:XLuke44-Main/MeeCreeps.git'
+                            }
+
+                            issueManagement {
+                                system 'github'
+                                url 'https://github.com/XLuke44-Main/MeeCreeps/issues'
+                            }
+
+                            licenses {
+                                license {
+                                    name 'MIT'
+                                    distribution 'repo'
+                                }
+                            }
+
+                            developers {
+                                developer {
+                                    id 'XLuke44'
+                                    name 'XLuke44'
+                                    roles {
+                                        role 'developer'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
