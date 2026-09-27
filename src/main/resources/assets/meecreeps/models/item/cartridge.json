@@ -1,0 +1,50 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "meecreeps:items/cartridge_empty_interdimensional"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "meecreeps:solution_state": 1.0
+      },
+      "model": "meecreeps:item/cartridge_interdimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 2.0
+      },
+      "model": "meecreeps:item/cartridge_empty_intradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 3.0
+      },
+      "model": "meecreeps:item/cartridge_intradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 4.0
+      },
+      "model": "meecreeps:item/cartridge_empty_extradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 5.0
+      },
+      "model": "meecreeps:item/cartridge_extradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 6.0
+      },
+      "model": "meecreeps:item/cartridge_empty_hyperdimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:solution_state": 7.0
+      },
+      "model": "meecreeps:item/cartridge_hyperdimensional"
+    }
+  ]
+}

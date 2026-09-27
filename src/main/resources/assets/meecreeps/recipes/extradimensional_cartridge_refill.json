@@ -1,0 +1,8 @@
+{
+  "type": "meecreeps:extradimensional_cartridge_refill_factory",
+  "result": { "item": "meecreeps:cartridge" },
+  "ingredients": [
+    { "item": "meecreeps:cartridge" },
+    { "item": "minecraft:gold_ingot" }
+  ]
+}

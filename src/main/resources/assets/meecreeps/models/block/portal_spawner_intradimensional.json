@@ -1,0 +1,41 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "meecreeps:blocks/portal_spawner_intradimensional",
+    "texture": "meecreeps:blocks/portal_spawner_intradimensional"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        15.999
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#texture"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#texture"
+        }
+      }
+    }
+  ]
+}
