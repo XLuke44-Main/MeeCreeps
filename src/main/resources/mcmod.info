@@ -1,0 +1,23 @@
+[
+  {
+    "modid": "meecreeps",
+    "name": "XLuke44's MeeCreeps",
+    "description": "Remaster of McJty's Original MeeCreeps mod for minecraft forge 1.12.2 with new content, improvements, fixes, and quality-of-life changes.",
+    "version": "1.4.8.5",
+    "mcversion": "1.12.2",
+    "url": "https://github.com/XLuke44-Main/MeeCreeps",
+    "updateUrl": "",
+    "authorList": [
+      "XLuke44"
+    ],
+    "credits": "Original MeeCreeps by McJty and contributors. Maintained by XLuke44. Original project: https://github.com/McJty/MeeCreeps",
+    "logoFile": "",
+    "screenshots": [],
+    "requiredMods": [
+      "mcjtylib_ng"
+    ],
+    "dependencies": [
+      "required-after:mcjtylib_ng@3.5.4"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "parent": "meecreeps:root",
+  "display": {
+    "icon": { "item": "meecreeps:emptyportalgun" },
+    "title": { "translate": "achievement.meecreeps.portal_gun" },
+    "description": { "translate": "achievement.meecreeps.portal_gun.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": { "trigger": "minecraft:impossible" }
+  }
+}

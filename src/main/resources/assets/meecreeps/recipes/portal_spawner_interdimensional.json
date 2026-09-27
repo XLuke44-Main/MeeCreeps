@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "meecreeps:portal_spawner_interdimensional"
+  },
+  "pattern": [
+    "M M",
+    "MCM",
+    "M M"
+  ],
+  "type": "meecreeps:portal_spawner_recipe",
+  "solution": "interdimensional",
+  "mirrored": false,
+  "key": {
+    "M": {
+      "item": "minecraft:emerald_block"
+    },
+    "C": {
+      "item": "meecreeps:cartridge"
+    }
+  }
+}

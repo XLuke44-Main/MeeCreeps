@@ -1,0 +1,26 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "meecreeps:items/projectile_interdimensional"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "meecreeps:portal_solution": 1.0
+      },
+      "model": "meecreeps:item/projectile_intradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:portal_solution": 2.0
+      },
+      "model": "meecreeps:item/projectile_extradimensional"
+    },
+    {
+      "predicate": {
+        "meecreeps:portal_solution": 3.0
+      },
+      "model": "meecreeps:item/projectile_hyperdimensional"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "result": { "item": "meecreeps:cartridge" },
+  "pattern": [
+    "G",
+    "B"
+  ],
+  "type": "meecreeps:intradimensional_cartridge_factory",
+  "key": {
+    "G": { "item": "minecraft:glass" },
+    "B": { "item": "minecraft:bucket" }
+  }
+}
