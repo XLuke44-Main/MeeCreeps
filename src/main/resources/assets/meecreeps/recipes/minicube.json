@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "meecreeps:minicube"
+  },
+  "pattern": [
+    "dgd",
+    "gCg",
+    "ggg"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "type": "forge:ore_dict",
+      "ore": "chest"
+    },
+    "d": {
+      "item": "minecraft:iron_ingot"
+    },
+    "g": {
+      "item": "minecraft:brick"
+    }
+  }
+}

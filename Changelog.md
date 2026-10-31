@@ -1,0 +1,35 @@
+# MeeCreeps 1.4.9
+
+- Added username autocompletion to the custom destination input field.
+- Added favourite destinations.
+- Added confirmation prompts when uploading or downloading destinations.
+- Added ability to travel to Portal Spawners.
+- Added Portal Gun projectile capture to Portal Spawners.
+- Added Dual-Link mode for the Portal Gun.
+- Added Quick Shot.
+- Added the ability to place and mine MeeCreep Cubes.
+- Added Mini Creeps and Mini Creep Cubes.
+- Added additional options for the flatten area tool.
+- Added support for Galacticraft, Galaxy Space, and Galacticraft Space Station.
+- Added an easter egg :3
+- Replaced dynamic config generation with a premade configuration file.
+- Standardized dimension names for improved readability.
+- Changed key binds.
+- Changed the default auto-close timer.
+- Reduced bubble duration.
+- Changed the flatten area tool to dig from top to bottom.
+- Set Portal Spawners to use the Pulse Only opening policy.
+- Removed special lever handling for Portal Spawners.
+- Restricted MeeCreep task controls to their summoner.
+- Improved flatten area scanning performance.
+- Improved portal force-closing reliability.
+- Fixed destination searching and portal placement on flat terrain.
+- Fixed translations.
+- Fixed Creep Cube rendering.
+- Fixed incorrect portal texture scaling.
+- Fixed overlapping portals.
+- Fixed key bind conflict handling.
+- Fixed out of bounds custom destinations
+- Removed bugged MeeCreep sounds.
+- Removed MeeCreep console commands.
+- Removed broken cross-mod version compatibility.

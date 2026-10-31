@@ -1,0 +1,8 @@
+{
+  "type": "meecreeps:intradimensional_cartridge_refill_factory",
+  "result": { "item": "meecreeps:cartridge" },
+  "ingredients": [
+    { "item": "meecreeps:cartridge" },
+    { "item": "minecraft:water_bucket" }
+  ]
+}

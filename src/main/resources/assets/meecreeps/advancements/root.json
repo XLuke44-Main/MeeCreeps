@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "meecreeps:projectile"
+    },
+    "title": {
+      "translate": "achievement.meecreeps.welcome",
+      "color": "green"
+    },
+    "description": {
+      "translate": "achievement.meecreeps.welcome.desc"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "installed": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+#PARSE_ESCAPES
+
+achievement.meecreeps.welcome=§aWitaj w MeeCreeps
+achievement.meecreeps.welcome.desc=Witaj w MeeCreeps
+achievement.meecreeps.look_at_me=§bSpójrz na mnie!
+achievement.meecreeps.look_at_me.desc=Stwórz kostkę MeeCreepa
+achievement.meecreeps.look_at_me_mini=§bSpójrz na mnie! §e(mini edition)
+achievement.meecreeps.look_at_me_mini.desc=Stwórz Miniaturową Kostkę MeeCreepa
+achievement.meecreeps.portal_gun=§fPistolet Portalowy
+achievement.meecreeps.portal_gun.desc=Stwórz swój pierwszy pistolet portalowy
+achievement.meecreeps.local_travel=§9Podróż Lokalna
+achievement.meecreeps.local_travel.desc=Stwórz wewnątrzwymiarowy płyn portalowy
+achievement.meecreeps.dimensional_travel=§aPodróż Międzywymiarowa
+achievement.meecreeps.dimensional_travel.desc=Stwórz międzywymiarowy płyn portalowy
+achievement.meecreeps.extradimensional_travel=Podróż Ekstrawymiarowa
+achievement.meecreeps.extradimensional_travel.desc=Stwórz ekstrawymiarowy płyn portalowy
+achievement.meecreeps.hyperdimensional_travel=Podróż Hiperwymiarowa
+achievement.meecreeps.hyperdimensional_travel.desc=Stwórz hiperwymiarowy płyn portalowy
+
+item.meecreeps.creepcube.name=Kostka MeeCreepa
+item.meecreeps.minicube.name=Miniaturowa kostka MeeCreepa
+item.meecreeps.portalgun.name=Pistolet Portalowy
+item.meecreeps.emptyportalgun.name=Pistolet Portalowy (pusty)
+item.meecreeps.cartridge.name=Zbiornik Międzywymiarowego Płynu Portalowego
+item.meecreeps.intradimensional_cartridge.name=Zbiornik Wewnątrzwymiarowego Płynu Portalowego
+item.meecreeps.empty_intradimensional_cartridge.name=Pusty Zbiornik Wewnątrzwymiarowego Płynu Portalowego
+item.meecreeps.interdimensional_cartridge.name=Zbiornik Międzywymiarowego Płynu Portalowego
+item.meecreeps.empty_interdimensional_cartridge.name=Pusty Zbiornik Międzywymiarowego Płynu Portalowego
+item.meecreeps.extradimensional_cartridge.name=Zbiornik Ekstrawymiarowego Płynu Portalowego
+item.meecreeps.empty_extradimensional_cartridge.name=Pusty Zbiornik Ekstrawymiarowego Płynu Portalowego
+item.meecreeps.hyperdimensional_cartridge.name=Zbiornik Hiperwymiarowego Płynu Portalowego
+item.meecreeps.empty_hyperdimensional_cartridge.name=Pusty Zbiornik Hiperwymiarowego Płynu Portalowego
+
+tile.meecreeps.portal_spawner_intradimensional.name=Wewnątrzwymiarowy Generator Portali
+tile.meecreeps.portal_spawner_linked_intradimensional.name=Połączony Wewnątrzwymiarowy Generator Portali
+tile.meecreeps.portal_spawner_interdimensional.name=Międzywymiarowy Generator Portali
+tile.meecreeps.portal_spawner_linked_interdimensional.name=Połączony Międzywymiarowy Generator Portali
+tile.meecreeps.portal_spawner_extradimensional.name=Ekstrawymiarowy Generator Portali
+tile.meecreeps.portal_spawner_linked_extradimensional.name=Połączony Ekstrawymiarowy Generator Portali
+tile.meecreeps.portal_spawner_hyperdimensional.name=Hiperwymiarowy Generator Portali
+tile.meecreeps.portal_spawner_linked_hyperdimensional.name=Połączony Hiperwymiarowy Generator Portali
+
+entity.MeeCreeps.name=MeeCreeps
+entity.meecreeps_projectile.name=Pocisk z pistoletu portalowego
+itemGroup.meecreeps=XLuke44's MeeCreeps
+
+key.categories.meecreeps=MeeCreeps
+key.air_placement=Powietrzne Portale
+key.close_all_portals=Zamknij Wszystkie Portale
+key.fast_return=Szybki Powrót
+key.favourite_destination=Ulubione miejsce docelowe
+key.last_message=Powtórz Ostatnią Wiadomość
+key.open_saved_destinations=Otwórz Zapisane Miejsca Docelowe
+key.portal_autoclose=Automatyczne Zamykanie Portalu
+key.portal_gun_mode=Przełącz tryb pistoletu portalowego
+key.terminate_cube=Usuń Wszystkie MeeCreeps'y
+
+message.meecreeps.gui.name_label=Nazwa:
+message.meecreeps.gui.what_can_i_do=Co mogę dla ciebie zrobić?
+message.meecreeps.gui.other_things=Czy potrafisz robić coś jeszcze?
+message.meecreeps.gui.problem=Czy jest jakiś problem?
+message.meecreeps.gui.alternatives=A może odpowiada ci któraś z tych opcji?
+message.meecreeps.gui.cant_do_much=Nie mogę tutaj zbyt wiele zrobić
+message.meecreeps.gui.please_stop_now=Przestań już!
+message.meecreeps.gui.carry_on=Kontynuuj...
+message.meecreeps.gui.never_mind=Nieważne...
+message.meecreeps.gui.destination_not_set=Nie ustawiono miejsca docelowego
+
+message.meecreeps.action.make_house=Zbuduj dom
+message.meecreeps.action.make_platform=Zbuduj platformę
+message.meecreeps.action.flatten_area=Wyrównaj teren
+message.meecreeps.action.chop_tree=Zetnij to drzewo
+message.meecreeps.action.chop_tree_collect=Zetnij to drzewo i zbierz wypadające z niego przedmioty
+message.meecreeps.action.dig_down=Kop prosto w dół aż do skały macierzystej
+message.meecreeps.action.dig_down_stairs=Kop w dół aż do skały macierzystej, budując schody
+message.meecreeps.action.dig_tunnel=Wykop tunel 3x3 o długości 32 bloków
+message.meecreeps.action.mine_ores=Znajdź i wykop wszystkie pobliskie rudy
+message.meecreeps.action.harvest=Zbierz te plony
+message.meecreeps.action.harvest_replant=Zbierz te plony i zasadź je ponownie
+message.meecreeps.action.torches=Oświetl okolicę
+message.meecreeps.action.follow_and_lightup=Chodź za mną i oświetlaj okolicę
+message.meecreeps.action.pickup=Podnieś przedmioty
+message.meecreeps.action.follow_and_pickup=Chodź za mną i podnoś przedmioty
+message.meecreeps.action.move_stuff=Podnieś przedmioty i chodź za mną
+message.meecreeps.action.idle=Poczekaj chwilę
+message.meecreeps.action.angry=Rozzłość się
+
+message.meecreeps.action.what_direction=W którą stronę mam kopać?
+message.meecreeps.action.to_north=Na północ
+message.meecreeps.action.to_east=Na wschód
+message.meecreeps.action.to_south=Na południe
+message.meecreeps.action.to_west=Na zachód
+message.meecreeps.action.flatten_area_size=Jak duży obszar chcesz wyrównać?
+message.meecreeps.action.flatten_9x9=9x9 wystarczy
+message.meecreeps.action.flatten_11x11=Poproszę 11x11
+message.meecreeps.action.flatten_13x13=Będę potrzebować 13x13
+message.meecreeps.action.flatten_15x15=15x15 powinno wystarczyć
+message.meecreeps.action.flatten_17x17=17x17, tak na wszelki wypadek
+message.meecreeps.action.flatten_19x19=19x19... Lubię przestrzeń
+message.meecreeps.action.flatten_21x21=21x21, zaszalejmy!
+message.meecreeps.action.house_size=Jak duży ma być dom?
+message.meecreeps.action.house_9x9=Oczywiście, że 9x9!
+message.meecreeps.action.house_11x11=11x11 jest zdecydowanie gorsze, ale...
+message.meecreeps.action.house_13x13=Potrzebuję więcej miejsca, więc wybierz 13x13
+message.meecreeps.action.platform_size=Jak duża ma być platforma?
+message.meecreeps.action.platform_9x9=9x9 to idealny rozmiar!
+message.meecreeps.action.platform_11x11=11x11, bo jestem chciwy
+message.meecreeps.action.platform_13x13=Jestem wyjątkowy, więc zbuduj platformę 13x13
+message.meecreeps.action.platform_15x15=15x15 byłoby wspaniałe
+message.meecreeps.action.platform_17x17=17x17, bo większe znaczy lepsze
+message.meecreeps.action.platform_19x19=19x19, nie ma co się ograniczać!
+message.meecreeps.action.platform_21x21=21x21, równie dobrze możemy pójść na całość
+
+message.meecreeps.box_unusable=Ta kostka MeeCreepa stała się bezużyteczna!
+message.meecreeps.no_last_action=Brak ostatniego działania!
+message.meecreeps.last_action_not_possible=Nie można tutaj wykonać ostatniego działania!
+message.meecreeps.cant_spawn_meecreep=Nie można znaleźć odpowiedniego miejsca na przyzwanie MeeCreepa!
+message.meecreeps.max_spawn_reached=Możesz mieć jednocześnie maksymalnie %s MeeCreepów!
+message.meecreeps.cant_continue=Nie mogę kontynuować w ten sposób
+message.meecreeps.cannot_find=Nie mogę znaleźć żadnych %s!
+message.meecreeps.cant_find_ladders=Nie mogę znaleźć żadnych drabin
+message.meecreeps.cant_find_stairs_or_cobble=Nie mogę znaleźć schodów ani bruku!
+message.meecreeps.cant_find_torches=Nie mogę znaleźć żadnych pochodni
+message.meecreeps.cant_pickup_block=Nie mogę podnieść tego bloku!
+message.meecreeps.where_are_you=Nie ma cię w pobliżu, więc musiałem wszystko upuścić
+message.meecreeps.inventory_missing=Brakuje ekwipunku, więc musiałem wszystko upuścić
+message.meecreeps.i_gave_some_things=Oto kilka przedmiotów dla ciebie
+message.meecreeps.put_stuff_away_marked=Odłożyłem przedmioty do oznaczonego ekwipunku
+message.meecreeps.put_stuff_away_target=Odłożyłem przedmioty do pierwotnego ekwipunku docelowego
+message.meecreeps.put_stuff_away_specific=Odłożyłem przedmioty do skrzyni oddalonej o %s od twojej pozycji
+
+message.meecreeps.portal_mode_normal=Tryb pistoletu portalowego: normalny
+message.meecreeps.portal_mode_dual_linked=Tryb pistoletu portalowego: dwa połączone portale
+message.meecreeps.cant_find_portal_spot=Nie można znaleźć odpowiedniego miejsca na utworzenie portalu!
+message.meecreeps.gun_no_charge=Za mało ładunków!
+message.meecreeps.gun_no_destination=Ten pistolet portalowy nie ma ustawionego aktualnego miejsca docelowego!
+message.meecreeps.gun_bad_destination=Coś jest nie tak z obecnym miejscem docelowym!
+message.meecreeps.portal_already_there=W miejscu docelowym znajduje się już portal!
+message.meecreeps.destination_obstructed=Miejsce docelowe wydaje się zablokowane!
+message.meecreeps.portal_spawner_linked_no_rebind=Połączone Generatory Portali są na stałe powiązane ze swoimi odpowiednikami.
+message.meecreeps.portal_spawner_no_destination=W tym pistolecie portalowym nie wybrano zapisanego miejsca docelowego!
+message.meecreeps.portal_spawner_unavailable=Wybrany wymiar docelowy jest niedostępny!
+message.meecreeps.portal_spawner_incompatible=To miejsce docelowe nie jest zgodne z tym generatorem portali!
+message.meecreeps.portal_spawner_assigned=Ustawiono miejsce docelowe generatora portali: %s.
+message.meecreeps.portal_spawner_no_selected_slot=Najpierw wybierz zapisane miejsce docelowe.
+message.meecreeps.portal_spawner_invalid_target=NIEPRAWIDŁOWY CEL!
+message.meecreeps.portal_spawner_active_no_reconfigure=Zamknij połączenie przed rekonfiguracją.
+message.meecreeps.portal_spawner_upload_confirmation=Przesłać %s Do Generatora Portali? Naciśnij y, aby potwierdzić; każdy inny klawisz anuluje operację.
+message.meecreeps.portal_spawner_download_confirmation=Pobrać pozycję generatora portali? Spowoduje to nadpisanie zapisanego miejsca docelowego! Naciśnij y, aby potwierdzić; każdy inny klawisz anuluje operację.
+message.meecreeps.portal_spawner_operation_cancelled=Operacja anulowana.
+message.meecreeps.portal_spawner_confirmation_stale=Potwierdzenie wygasło.
+message.meecreeps.portal_spawner_upload_success=Zaktualizowano miejsce docelowe: %s.
+message.meecreeps.portal_spawner_download_success=Zapisano %s w pistolecie portalowym.
+
+message.meecreeps.missing_cartridge=Ten pistolet portalowy nie ma zbiornika!
+message.meecreeps.cartridge_full=Zbiornik jest pełny!
+message.meecreeps.missing_intradimensional_refill=W ekwipunku nie ma wiadra z wodą ani mikstury!
+message.meecreeps.missing_enderpearls=W ekwipunku nie ma pereł Kresu!
+message.meecreeps.missing_gold_ingots=W ekwipunku nie ma sztabek złota!
+message.meecreeps.missing_redstone=W ekwipunku nie ma czerwonego proszku!
+message.meecreeps.intradimensional_dimension_error=WEWNĄTRZWYMIAROWY PŁYN PORTALOWY NIE MOŻE PODRÓŻOWAĆ DO INNEGO WYMIARU!
+message.meecreeps.intradimensional_player_dimension_error=GRACZ DOCELOWY ZNAJDUJE SIĘ W INNYM WYMIARZE!
+message.meecreeps.intradimensional_dimension_list_error=WEWNĄTRZWYMIAROWY PŁYN PORTALOWY NIE JEST ZGODNY Z PODRÓŻAMI MIĘDZY WYMIARAMI!
+
+message.meecreeps.tooltip.cube_intro=\n\
+    §aLewy przycisk myszy na bloku: §fotwórz menu wyboru zadań MeeCreepa\n\
+    §aPrawy przycisk myszy na bloku: §fwykonaj ostatnią czynność kostki\n\
+    §aShift + lewy przycisk myszy na bloku: §fumieść kostkę na wierzchu\n\
+    §aShift + lewy przycisk myszy na kostce: §fodzyskaj umieszczoną kostkę\n\
+    §cUderz MeeCreepa: §faby go zlikwidować 
+message.meecreeps.tooltip.cube_uses=\
+    §aPozostałe użycia: §e%s
+message.meecreeps.tooltip.portalgun=\
+    %1$sKucnij + prawy przycisk myszy: §fzarządzaj miejscami docelowymi\n\
+    %1$sPrawy przycisk myszy: §fstwórz portal do aktualnego miejsca docelowego\n\
+    %1$sPrawy przycisk myszy na portalu: §fusuń portal\n\
+    %1$sPozostałe ładunki: §e%2$s
+message.meecreeps.tooltip.emptyportalgun=\
+    §aPołącz z naładowanym zbiornikiem\n\
+    §aw siatce rzemieślniczej
+message.meecreeps.tooltip.intradimensional_cartridge_item=\
+    §9Zbiornik wewnątrzwymiarowego Płynu Portalowego do pistoletu portalowego\n\
+    §fPrawy przycisk myszy uzupełnia go wodą\n\
+    §fMożna go także uzupełniać butelkami wody i miksturami\n\
+    §9Pozostałe ładunki: §e%s
+message.meecreeps.tooltip.interdimensional_cartridge_item=\
+    §aZbiornik międzywymiarowego Płynu Portalowego do pistoletu portalowego\n\
+    §fPrawy przycisk myszy ładuje go, zużywając\n\
+    §fperły Kresu z ekwipunku\n\
+    §aPozostałe ładunki: §e%s
+message.meecreeps.tooltip.extradimensional_cartridge_item=\
+    §eZbiornik ekstrawymiarowego Płynu Portalowego do pistoletu portalowego\n\
+    §fPrawy przycisk myszy uzupełnia go sztabkami złota\n\
+    §ePozostałe ładunki: §e%s
+message.meecreeps.tooltip.hyperdimensional_cartridge_item=\
+    §cZbiornik hiperwymiarowego Płynu Portalowego do pistoletu portalowego\n\
+    §fPrawy przycisk myszy uzupełnia go czerwonym proszkiem\n\
+    §cPozostałe ładunki: §e%s
+
+death.attack.blender=%1$s został zmielony na miazgę
