@@ -1,0 +1,24 @@
+{
+  "parent": "meecreeps:root",
+  "display": {
+    "icon": {
+      "item": "meecreeps:minicube"
+    },
+    "title": {
+      "translate": "achievement.meecreeps.look_at_me_mini",
+      "color": "aqua"
+    },
+    "description": {
+      "translate": "achievement.meecreeps.look_at_me_mini.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

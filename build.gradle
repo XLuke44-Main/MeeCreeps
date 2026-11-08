@@ -1,0 +1,153 @@
+buildscript {
+    repositories {
+        jcenter()
+
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
+        }
+
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'maven'
+
+repositories {
+
+    maven {
+        name = "LocalMods"
+        url = uri("$rootDir/local-maven")
+    }
+
+    maven {
+        name = "Forge"
+        url = "https://maven.minecraftforge.net/"
+    }
+
+    maven {
+        name = "Sonatype"
+        url = "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+ext {
+    minecraft_version = "1.12.2"
+    mcp_mappings = "20180504-1.12"
+    forge_version = "14.23.5.2859"
+    jei_version = "4.16.5.1030"
+    waila_version = "1.8.26-B41_1.12.2"
+    top_version = "1.12-1.4.28"
+    mcjtylib_version = "1.12-3.5.4"
+    redstoneflux_version = "1.12-2.1.1.1:universal"
+    intwheel_version = "1.12-1.2.7"
+}
+
+group = "com.github.mcjty"
+version = "1.4.9.1-1.12.2"
+archivesBaseName = "meecreeps"
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-proc:none']
+}
+
+minecraft {
+    ext.version = "${minecraft_version}-${forge_version}"
+    mappings channel: 'snapshot', version: mcp_mappings
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+
+        server {
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+}
+
+artifacts {
+    archives sourceJar
+    archives deobfJar
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": archivesBaseName,
+            "Specification-Vendor": project.group,
+            "Specification-Version": project.version,
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor": project.group,
+            "FMLCorePluginContainsFMLMod": "false",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+
+    finalizedBy('reobfJar')
+}
+
+dependencies {
+
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    implementation fg.deobf("mezz.jei:jei_1.12.2:${jei_version}")
+
+    implementation fg.deobf("mcp.mobius.waila:Hwyla:${waila_version}")
+
+    implementation fg.deobf("mcjty.theoneprobe:TheOneProbe-1.12:${top_version}")
+
+    implementation fg.deobf("cofh:RedstoneFlux:${redstoneflux_version}")
+
+    implementation fg.deobf("com.github.mcjty:intwheel:${intwheel_version}")
+
+    if (!project.hasProperty("singleproject")) {
+        implementation fg.deobf("com.github.mcjty:mcjtylib:${mcjtylib_version}")
+    } else {
+        implementation project(':McJtyLib')
+    }
+}
+
+processResources
+{
+
+    inputs.property "version", project.version
+    inputs.property "mcversion", minecraft_version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+
+        expand 'version': project.version, 'mcversion': minecraft_version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+

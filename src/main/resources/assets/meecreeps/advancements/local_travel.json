@@ -1,0 +1,18 @@
+{
+  "parent": "meecreeps:the_portal_gun",
+  "display": {
+    "icon": {
+      "item": "meecreeps:cartridge",
+      "nbt": "{transportSolutionType:\"intradimensional\",charge:1}"
+    },
+    "title": { "translate": "achievement.meecreeps.local_travel", "color": "blue" },
+    "description": { "translate": "achievement.meecreeps.local_travel.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "refilled": { "trigger": "minecraft:impossible" }
+  }
+}

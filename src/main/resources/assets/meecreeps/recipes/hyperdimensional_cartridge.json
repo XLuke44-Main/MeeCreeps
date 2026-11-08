@@ -1,0 +1,14 @@
+{
+  "result": { "item": "meecreeps:cartridge" },
+  "pattern": [
+    "nnn",
+    "nGn",
+    "nBn"
+  ],
+  "type": "meecreeps:hyperdimensional_cartridge_factory",
+  "key": {
+    "G": { "item": "minecraft:glass" },
+    "B": { "item": "minecraft:bucket" },
+    "n": { "item": "minecraft:redstone" }
+  }
+}
